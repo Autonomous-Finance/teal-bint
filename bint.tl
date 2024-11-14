@@ -294,7 +294,7 @@ local BINT_MININTEGER: BigInteger
 
 --- Function to check that the x metatable is a bint one
 local function has_bint_metatable(x: any): boolean
-  return type(x) == "table" and (getmetatable(x as table) as metatable<BigInteger>) == getmetatable(bint)
+  return type(x) == "table" and (getmetatable(x as table) as metatable<BigInteger>) == (bint as metatable<BigInteger>)
 end
 
 --- Create a new bint with 0 value.
